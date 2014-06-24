@@ -1,0 +1,27 @@
+{
+  "name": "steal-can-example",
+  "description": "StealJS and CanJS example",
+  "version": "0.0.0",
+  "author": {
+    "name": "Bitovi",
+    "email": "contact@bitovi.com",
+    "web": "http://bitovi.com/"
+  },
+  "scripts": {
+    "test": "grunt test --stack"
+  },
+  "dependencies": {
+  
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "main": "steal",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "steal-tools": "0.2.0"
+  }
+}

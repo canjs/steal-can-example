@@ -1,0 +1,10 @@
+<h1>Steal/CanJS Example App</h1>
+{{#isLoggedIn}}
+	{{linkTo "home"}}
+	{{linkTo "jquery-ui"}}
+	{{linkTo "bootstrap"}}
+	<a href="javascript://" can-click='logout'>logout</a>
+{{/isLoggedIn}}
+
+
+<div id="main">Loading ...</div>

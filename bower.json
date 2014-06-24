@@ -1,0 +1,31 @@
+{
+  "name": "steal-can-example",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bitovi/steal-can-example",
+  "authors": [
+    "justin@bitovi.com"
+  ],
+  "description": "StealJS CanJS example",
+  "main": "dist/bundle/main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "CanJS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "steal": "0.2.0",
+    "canjs": "git://github.com/bitovi/canjs.git#017d8aed847dc69e7abaae1bd3edb274c13cb89d",
+    "jquery": "~2.1.1",
+    "jquery-ui": "~1.10.4",
+    "bootstrap": "~3.1.1"
+  }
+}
