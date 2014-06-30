@@ -39,7 +39,7 @@ var AppState = can.Map.extend({
 	},
 	logout() {
 		var self = this;
-		this.attr("session").destroy( () => self.removeAttr("session") );
+		this.attr("session").destroy(() => self.removeAttr("session"));
 	}
 }),
 	appState = new AppState();

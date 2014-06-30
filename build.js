@@ -4,5 +4,5 @@ stealTools.build({
 	config: __dirname+"/stealconfig.js",
 	main: "main"
 },{
-	minify: false
+	//minify: false
 });
