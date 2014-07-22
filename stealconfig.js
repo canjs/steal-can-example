@@ -24,7 +24,7 @@
 	}());
 
 
-	steal.config({
+	System.config({
 		map: {
 			"can/util/util": "can/util/jquery/jquery",
 			"jquery/jquery": "jquery"
@@ -51,7 +51,7 @@
 			mustache: "can/view/mustache/system",
 			stache: "can/view/stache/system"
 		},
-		bundle: ["components/home","components/bootstrap","components/login","components/jquery-ui"]
+		bundle: ["components/home/home","components/bootstrap/bootstrap","components/login/login","components/jquery-ui/jquery-ui"]
 	});
 })();
 
