@@ -2,6 +2,19 @@ import can from 'can/';
 import loginStache from './login.stache!';
 import Session from 'models/session';
 
+/**
+ * @module {function} components/login/ <sc-login>
+ * @parent steal-can-example
+ * @inherits can.Component
+ * 
+ * @signature `<sc-login>`
+ * 
+ * Creates a login component.
+ * 
+ * @body
+ * 
+ * 
+ */
 export default can.Component.extend({
 	tag: "sc-login",
 	template: loginStache,

@@ -1,4 +1,7 @@
 module.exports = function (grunt) {
+	grunt.loadNpmTasks('steal-tools');
+	grunt.loadNpmTasks('documentjs');
+	
 	grunt.initConfig({
 		stealBuild: {
 			main: {
@@ -13,7 +16,7 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('steal-tools');
+	
 
 	grunt.registerTask('build', ['stealBuild']);
 };
