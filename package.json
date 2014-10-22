@@ -22,6 +22,7 @@
   "main": "steal",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "steal-tools": "0.3.0"
+    "steal-tools": "0.3.0",
+    "documentjs": "~0.1.3"
   }
 }
