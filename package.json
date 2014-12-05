@@ -22,7 +22,7 @@
   "main": "steal",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "steal-tools": "0.3.0",
+    "steal-tools": "git://github.com/bitovi/steal-tools#ef438f50f918b7ef101efea572333704b75d4ee9",
     "documentjs": "~0.1.3"
   }
 }

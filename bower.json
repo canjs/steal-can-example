@@ -22,10 +22,24 @@
     "tests"
   ],
   "dependencies": {
-    "steal": "0.3.0",
-    "canjs": "git://github.com/bitovi/canjs.git#017d8aed847dc69e7abaae1bd3edb274c13cb89d",
+    "steal": "bitovi/steal#658dc3a5866a89de00d5c6c581671df1883d8872",
+    "canjs": "bitovi/canjs#bower",
     "jquery": "~2.1.1",
     "jquery-ui": "~1.10.4",
     "bootstrap": "~3.1.1"
+  },
+  "system": {
+    "paths": {
+			"theme/*": "bower_components/jquery-ui/themes/base/jquery.ui.*css",
+			"ui/*": "bower_components/jquery-ui/ui/jquery.ui.*.js",
+      "bootstrap" : "bower_components/bootstrap/dist/js/bootstrap.js",
+      "bootstrap.css" : "bower_components/bootstrap/dist/css/bootstrap.csscss"
+    },
+    "meta": {
+			"ui/core": {"deps": ["jquery","theme/core.css!","theme/theme.css!"]},
+			"ui/widget": {"deps": ["jquery"]},
+			"ui/accordion": {"deps": ["ui/core","ui/widget","theme/accordion.css!"]}
+    },
+    "bundle": ["components/home/home","components/bootstrap/bootstrap","components/login/login","components/jquery-ui/jquery-ui"]
   }
 }

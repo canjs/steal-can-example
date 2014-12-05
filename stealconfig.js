@@ -1,3 +1,5 @@
+require("bower.json!bower");
+
 (function () {
 	// taking from HTML5 Shiv v3.6.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
 	var supportsUnknownElements = false;
@@ -25,35 +27,12 @@
 
 
 	System.config({
-		map: {
-			"can/util/util": "can/util/jquery/jquery",
-			"jquery/jquery": "jquery"
-		},
-		paths: {
-			"jquery": "bower_components/jquery/dist/jquery.js",
-			"can/*": "bower_components/canjs/*.js",
-			"theme/*": "bower_components/jquery-ui/themes/base/jquery.ui.*css",
-			"ui/*": "bower_components/jquery-ui/ui/jquery.ui.*.js",
-			"bootstrap" : "bower_components/bootstrap/dist/js/bootstrap.js",
-			"bootstrap.css" : "bower_components/bootstrap/dist/css/bootstrap.csscss"
-		},
 		meta: {
 			jquery: {
+        format: "global",
 				exports: "jQuery",
 				deps: supportsUnknownElements ? undefined : ["can/lib/html5shiv.js"]
-			},
-			"ui/core": {deps: ["jquery","theme/core.css!","theme/theme.css!"]},
-			"ui/widget": {deps: ["jquery"]},
-			"ui/accordion": {deps: ["ui/core","ui/widget","theme/accordion.css!"]}
+			}
 		},
-		ext: {
-			ejs: "can/view/ejs/system",
-			mustache: "can/view/mustache/system",
-			stache: "can/view/stache/system"
-		},
-		bundle: ["components/home/home","components/bootstrap/bootstrap","components/login/login","components/jquery-ui/jquery-ui"]
 	});
 })();
-
-
-System.buildConfig = {map: {"can/util/util" : "can/util/domless/domless"}};
