@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "steal": "bitovi/steal#658dc3a5866a89de00d5c6c581671df1883d8872",
-    "can": "bitovi/canjs#bower",
+    "canjs": "bitovi/canjs#bower",
     "jquery": "~2.1.1",
     "jquery-ui": "~1.10.4",
     "bootstrap": "~3.1.1"
