@@ -1,4 +1,4 @@
-import Model from 'can/model/';
+import Model from 'can/model/model';
 
 export default Model.extend({
 	findOne: function(){

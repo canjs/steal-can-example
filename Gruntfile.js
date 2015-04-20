@@ -3,12 +3,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('documentjs');
 	
 	grunt.initConfig({
-		stealBuild: {
+		"steal-build": {
 			main: {
 				options: {
 					system: {
-						config: __dirname + "/stealconfig.js",
-						main: "main"
+						config: "package.json!npm"
 					},
 					buildOptions: {}
 				}
@@ -18,5 +17,5 @@ module.exports = function (grunt) {
 
 	
 
-	grunt.registerTask('build', ['stealBuild']);
+	grunt.registerTask('build', ['steal-build']);
 };
