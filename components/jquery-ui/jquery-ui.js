@@ -1,4 +1,4 @@
-import can from 'can/';
+import can from 'can';
 import jqStache from './jquery-ui.stache!';
 import acc from 'ui/accordion';
 import $ from 'jquery';

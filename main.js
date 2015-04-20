@@ -1,8 +1,8 @@
-import can from 'can/';
+import can from 'can/can';
 import $ from 'jquery';
 import Session from 'models/session';
 import siteStache from 'site.stache!'
-import def from 'can/map/define/';
+import 'can/map/define/';
 
 
 // Defines the state of the application
