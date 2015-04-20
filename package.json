@@ -28,6 +28,9 @@
     "documentjs": "0.3.0-pre.1"
   },
   "system": {
+    "configDependencies": [
+      "system-live-reload"
+    ],
     "npmDependencies": [
       "can",
       "jquery"
