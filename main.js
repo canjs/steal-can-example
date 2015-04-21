@@ -4,6 +4,7 @@ import Session from 'models/session';
 import siteStache from 'site.stache!'
 import 'can/map/define/';
 
+
 // Defines the state of the application
 var AppState = can.Map.extend({
 	define : {
@@ -86,8 +87,8 @@ can.stache.registerHelper("linkTo", (page) => can.stache.safeString(can.route.li
 
 $(document.body).append( siteStache(appState) );
 
-export var onLiveReload = render;
+export var afterReload = render;
 
-export function liveReloadTeardown(){
+export function beforeDestroy(){
   $("#site").remove();
 };
