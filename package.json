@@ -29,7 +29,7 @@
   },
   "system": {
     "configDependencies": [
-      "$live-reload"
+      "live-reload"
     ],
     "npmDependencies": [
       "can",

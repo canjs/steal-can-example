@@ -3,7 +3,7 @@ import $ from 'jquery';
 import Session from 'models/session';
 import siteStache from 'site.stache!'
 import 'can/map/define/';
-
+import reload from 'live-reload';
 
 // Defines the state of the application
 var AppState = can.Map.extend({
@@ -87,8 +87,12 @@ can.stache.registerHelper("linkTo", (page) => can.stache.safeString(can.route.li
 
 $(document.body).append( siteStache(appState) );
 
-export var afterReload = render;
+// Called when the reload has completed.
+reload(function(){
+  render();
+});
 
-export function beforeDestroy(){
+// Called when this module gets deleted.
+reload.dispose(function(){
   $("#site").remove();
-};
+});
