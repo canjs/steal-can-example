@@ -3,7 +3,8 @@ import $ from 'jquery';
 import Session from 'models/session';
 import siteStache from 'site.stache!'
 import 'can/map/define/';
-
+import './site.css!';
+import reload from 'live-reload';
 
 // Defines the state of the application
 var AppState = can.Map.extend({
@@ -51,19 +52,25 @@ var pages = {
 	login: "<sc-login session='{session}'></sc-login>"
 };
 
+var currentPage;
+
+function render(){
+	var template =  pages[currentPage] || "<sc-"+currentPage+"></sc-"+currentPage+">";
+	$("#main").html(  can.stache( template )( appState ) );
+}
+
 appState.bind("showPage", (ev, newVal) => {
 	if(newVal) {
+		currentPage = newVal;
 		System.import("components/"+newVal+"/").then(
 			(Component) => {
-				var template =  pages[newVal] || "<sc-"+newVal+"></sc-"+newVal+">";
-				$("#main").html(  can.stache( template )( appState ) );
+				render();
 			}).catch( (e) => {
 				console.log("borked!",e, e.stack);
 			});
 	}
 
 });
-
 
 Session.findOne({}).then(
 	(session) => {
@@ -80,3 +87,13 @@ Session.findOne({}).then(
 can.stache.registerHelper("linkTo", (page) => can.stache.safeString(can.route.link(page,{page: page}))  );
 
 $(document.body).append( siteStache(appState) );
+
+// Called when the reload has completed.
+reload(function(){
+  render();
+});
+
+// Called when this module gets deleted.
+reload.dispose(function(){
+  $("#site").remove();
+});

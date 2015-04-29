@@ -3,6 +3,7 @@ define(['can/',
 	'bootstrap',
 	'bootstrap.css!'
 ], function(can, bootStache){
+
 	/**
 	 * @module {function} components/bootstrap/ <sc-bootstrap>
 	 * @parent steal-can-example
