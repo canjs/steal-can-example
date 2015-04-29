@@ -23,8 +23,8 @@
   "main": "main.js",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "steal-tools": "^0.9.0",
-    "steal": "git://github.com/stealjs/steal#live-reload",
+    "steal-tools": "^0.10.0",
+    "steal": "^0.10.0",
     "documentjs": "0.3.0-pre.1"
   },
   "system": {

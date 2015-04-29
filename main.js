@@ -3,6 +3,7 @@ import $ from 'jquery';
 import Session from 'models/session';
 import siteStache from 'site.stache!'
 import 'can/map/define/';
+import './site.css!';
 import reload from 'live-reload';
 
 // Defines the state of the application
